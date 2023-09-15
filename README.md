@@ -1,7 +1,6 @@
 # CSProjectSecretKeys
 
-Read Me In Progress... 
-
+READ ME UNDER CONSTRUCTION
 
 Language:Python
 
